@@ -1,5 +1,5 @@
-﻿/*** ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ***/
-/*** ------------------------------------------------               Done By Mohammed Reda                      ------------------------------------------------- ***/
+/*** ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ***/
+/*** ------------------------------------------------               Written By Mohammed Reda                      ------------------------------------------------- ***/
 /*** ------------------------------------------------            The Full Guide for the C++ Tasks              ------------------------------------------------- ***/
 /*** ------------------------------------------------                   [Level 1 Ai]                           ------------------------------------------------- ***/
 /*** ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ***/
@@ -137,8 +137,9 @@ int main()
 	cout << "$" << endl;
 	cout << "" << endl;
 	// (7) Cmath Library Usage.
-	// hint : عشان تشغل مكتبة السي ماث هتطلع في تاني سطر تضيف المكتبة بالكود دا 
-	// #include <cmath> , ب كدا انت تقدر تستعين بدوال ( جا , جتا , ظا , اُسس , الجذر) وحاجات كتير لازم تكون عارف اوامر المكتبة قبل ماتبدأ شغل بيها
+	// hint : #include <cmath> عشان تشغل مكتبة السي ماث هتطلع في تاني سطر تضيف المكتبة بالكود دا 
+	// ب كدا انت تقدر تستعين بدوال ( جا , جتا , ظا , اُسس , الجذر) وغيرها كتير، لازم تكون عارف اوامر أي مكتبة كويس جدا قبل ماتبدأ شغل بيها
+	// دي كلها من المكتبة عشان متستغربش عملناها امتى وازاي، احنا عملنا متغير واحد بس وبعد كدا استخدمنا اوامر المكتبة لحساب الجا والجتا الخ sin,cos,pow,sqrt,floor المهم الأوامر الي تحت الي هي  
 	cout << "#7 cmath calculator Task" << endl;
 	cout << "Enter the Sin : ";
 	cin >> x;
@@ -206,6 +207,7 @@ int main()
 	/*hint : false لان لو واحدة بس غلط هيطبع  true وخليك فاكر برضو ان العلامة دي && يعني "و" يعني لو لقيتها لازم تكون المعادلتين صحيحين عشان تطبع */
 	/*hint : وخليك فاكر برضو ان العلامة دي ! خاصة ب النفي بمعنى ان لو فيه معادلة أصلها 0 لو لقيت جنبها نفي هتحولها للعكس يعني ل 1*/
 	/*hint : false نروح للي جنبها بيقولك ال15 اكبر من ال36؟ طبعا لا برضو ف الي هيطلع من الطباعة هو 0 أو  or السؤال الاول مثلا بيقولك ال25 اصغر من ال7؟ الاجابة طبعا لا بس استنى لان دي ال*/
+	//hint : الكود الي انا كاتبه تحت دا ملهوش علاقة بتطبيق السؤال الي فوق، انا بس كاتبله ايه الي هيتطبع من الاسئلة دي
 	cout << "#9 output expressions Task" << endl;
 	cout << "Q1 = 0" << endl;
 	cout << "Q2 = 1" << endl;
@@ -249,7 +251,7 @@ int main()
 	cout << "The Company profit's = " << float(profits) << "$" << endl;
 	cout << "" << endl;
 	// (12) Sales Tax
-	//hint : طالب منك برنامج تحسب منه ضرائب المبيعات علما ان ضرايب الولاية 4% والضرايب في الدولة 2% يعني هتعمل 3 متغيرات واحد اليوزر يدخله والتاني تضربه ف2% والتالت ف4% وهنا انا استخدمت دالة السويتش احسن بحيث أخيره واعرف هو عايز يحسب ايه بالضبط
+	//hint : طالب منك برنامج تحسب منه ضرائب المبيعات علما ان ضرايب الولاية 4% والضرايب في الدولة 2% يعني هتعمل 3 متغيرات واحد اليوزر يدخله والتاني تضربه ف2% وتطبعه والتالت ف4% وتطبعه وهنا انا استخدمت دالة السويتش احسن بحيث أخيره واعرف هو عايز يحسب ايه بالضبط
 	cout << "#12 Sales Tax Task" << endl;
 	cout << "Which Tax you wanna calculate ?" << endl;
 	cout << "a) state tax " << endl;
@@ -264,7 +266,7 @@ int main()
 		cout << "put your state sales : ";
 		cin >> stateinput;
 		state = stateinput * 0.04;
-		totalstate = stateinput - state;
+		totalstate = stateinput - state; // المتغير الي بيحسب الأرباح بعد الضرائب
 		cout << "Your state profits sales after taxes = " << totalstate << "$" << endl; //ضفت سطر جديد بيحسب الارباح بعد الضرائب
 		cout << "Your state sales Taxes = " << state << "$" << endl; // سطر الضرائب لوحده
 		cout << "" << endl;
@@ -286,19 +288,20 @@ int main()
 	// hint : طالب منك تحسب الضرائب والتِبس في فاتورة مطعم لوجبة سعرها 44.5$ وبيقولك الضريبة 6.75% والتِبس 15% وتحسبه مع الضريبة
 	// hint : طالب منك كمان تطبع سعر الوجبة، وقيمة الضريبة وقيمة التِبس والناتج النهائي في الاخر
 	// hint : وخلاص هنخلي اليوزر الي هو الكاشير يحط سعر الوجبة والباقي يتعمل بشكل اوتوماتيك أحسن cout بس بدل مانعملهم 
+	// hint : ف عشان كدا هتعمل 4 متغيرات ، واحد لسعر الوجبة وواحد لسعر الضريبة وواحد للتِبس وواحد للتوتال
 	cout << "#13 Resturant Bill Task" << endl;
 	double mealcost, taxamount, tipamount, totalbill;
 	cout << "The meal cost = ";
 	cin >> mealcost;
-	taxamount = mealcost * 0.0675;
+	taxamount = mealcost * 0.0675; //متغير حساب الضريبة، ضربنا سعر الوجبة في 6.75% عادي
 	cout << "The tax amount = " << taxamount << "$" << endl;
-	tipamount = (taxamount + mealcost) * 0.15;
+	tipamount = (taxamount + mealcost) * 0.15; // متغير حساب التِبس، جمعنا سعر الضريبة والوجبة وضربناهم في 15% زي ماهو طالب
 	cout << "The tip amount = " << tipamount << "$" << endl;
-	totalbill = mealcost + taxamount + tipamount;
+	totalbill = mealcost + taxamount + tipamount; // متغير التوتال بتاع الفاتورة، جمعنا كل المتغيرات عشان نحسب المجموع النهائي 
 	cout << "The Total Bill = " << totalbill << "$" << endl;
 	cout << "" << endl;
 	// (14) Write a program that converts Celsius to Fahrenheit 
-	// hint : طالب منك تحول درجة الحرارة من سيلزيوس الى فهرنهايت، ولكن هنزود التحويل للعكس كمان بالسويتش عشان نخيره 
+	// hint : طالب منك تحول درجة الحرارة من سيلزيوس الى فهرنهايت، ولكن هنزود التحويل للعكس كمان بالسويتش عشان نخيره ودي إضافة مش مضطر تعملها، تقدر تعمل المطلوب منك بس
 	cout << "#14 Celsius to Fahrenheit Task" << endl;
 	cout << "Which equation do you want?" << endl;
 	cout << "a) Celsius to Fahrenheit. " << endl;
@@ -310,25 +313,27 @@ int main()
 	case 'a':
 		cout << "Enter your Heat in Celsius : ";
 		double Celsius, Fahrenheit;
-		cin >> Celsius;
-		Fahrenheit = (1.8 * Celsius) + 32;
-		cout << "The heat in Fahrenheit = " << Fahrenheit << " degree" << endl;
+		cin >> Celsius; // خليت اليوزر يدخل الدرجة بالسليزيوس
+		Fahrenheit = (1.8 * Celsius) + 32; // متغير الفهرنهايت، كتبنا القانون الي بيحول سيلزيوس الى فهرنهايت
+		cout << "The heat in Fahrenheit = " << Fahrenheit << " degree" << endl; // طبعنا الفهرنهايت جاهزة بعد التحويل الي فالسطر الي فوقها على طول
 		cout << "" << endl;
 		break;
 	case 'b':
 		cout << "Enter your Heat in Fahrenheit : ";
-		cin >> Fahrenheit;
-		Celsius = (Fahrenheit - 32) * 1.8;
-		cout << "Your Heat in Celsius = " << Celsius << " degree" << endl;
+		cin >> Fahrenheit; // خليت اليوزر يدخل الدرجة بالفهرنهايت 
+		Celsius = (Fahrenheit - 32) * 1.8; // متغير السيلزيوس، كتبنا القانون الي بيحول من فهرنهايت الى سيلزيوس
+		cout << "Your Heat in Celsius = " << Celsius << " degree" << endl; // طبعنا السيلزيوس جاهزة بعد التحويل الي فالسطر الي فوقها على طول
 		cout << "" << endl;
 	}
 	// (15) Write a program to calculate the volume of a sphere 4/3 PI r,3
+	// hint : بيقولك اكتب برنامج لحساب حجم الكرة علما ان (وكاتبلك القانون) عادي
+	// hint : عملت متغيرين واحد ل نصف القطر الخاص بالدائرة وواحد للحجم
 	cout << "#15 Volume of a sphere Task" << endl;
 	double volume, sphr;
 	cout << "Enter the sphere r : ";
-	cin >> sphr;
-	volume = (4 / 3) * 3.4 * sphr;
-	cout << "The sphere volume = " << volume << " cm " << endl;
+	cin >> sphr; // خليت اليوزر يدخل نصف القطر
+	volume = (4 / 3) * 3.4 * sphr; // قانون حساب حجم الكرة
+	cout << "The sphere volume = " << volume << " cm " << endl; // 
 	cout << "" << endl;
 	// (16) Write a program to print out the perimeter of rectangle given its height and width, perimeter = 2 (width=height).
 	cout << "#16 perimeter of a rectangle Task" << endl;
@@ -372,7 +377,7 @@ int main()
 	// (18) Write a program that takes hours and mintues as input and outputs tohe total number of minutes ( 1 hour 30 minutes = 90 minutes).
 	// (19) Write a program that takes an integer as the number of minutes and outputs the total hours and minutes ( 90 minutes = 1 hour 30 minutes).
 	// info : دول سؤالين طالب منك تعمل كل واحد لوحده عادي بس انا عن نفسي فضلت اعملها بالسويتش لان الاتنين شبه بعض
-
+	// solution : أهم حاجة فالسؤال دا طريقة تحويلك من الدقائق والساعات إلى الدقائق فقط والعكس، هكتبلك كومنت جنب السطور دي وهقولك جت ازاي
 	cout << "#18,19 Hours & minutes convertor to minutes Task." << endl;
 	cout << "Choose your equation: " << endl;
 	char equation3;
@@ -387,7 +392,7 @@ int main()
 		cin >> hour;
 		cout << "Enter the minutes: ";
 		cin >> minutes;
-		fullminutes = (hour * 60) + minutes;
+		fullminutes = (hour * 60) + minutes; // دا اهم سطر فالسؤال الأول كله لان هو الإجابة، وفكرته سهلة عملنا متغير وضربنا عدد الساعات في 60 وجمعنا عليهم عدد الدقائق عشان يتحولوا كلهم لـ دقايق زي ماهو مطلوب
 		cout << hour << " hour " << minutes << " minutes = " << fullminutes << " minutes " << endl;
 		cout << "" << endl;
 		break;
@@ -395,15 +400,15 @@ int main()
 		cout << "Enter the minutes: ";
 		int fullhours, halfminutes, minute;
 		cin >> minute;
-		fullhours = (minute / 60);
-		halfminutes = minute % 60;
+		fullhours = (minute / 60); // عملنا متغير بيحول الدقائق الى ساعات
+		halfminutes = minute % 60; // عملنا متغير عشان يكمل باقي الدقائق المُتبقية عن طريق باقي القسمة
 		cout << minute << " minutes = " << fullhours << " hour " << halfminutes << " minutes " << endl;
 		cout << " " << endl;
 		break;
 	}
 	// (20) Circuit Board Price.
-	// Qinfo : طالب مني أحسب الأرباح ل شركة الكترونيات الي بتاخد نسبة 40% من منتج قيمته 12.67 دولار
-	// inf : حبيت أضيف بالمرة ان اليوزر يكتب عدد المنتجات المُباعة عشان الكود يكون ليه معنى
+	// Qinfo : طالب منك تحسب الأرباح ل شركة الكترونيات بتاخد نسبة 40% من منتج قيمته 12.67 دولار
+	// inf : حبيت أضيف بالمرة ان اليوزر يكتب عدد المنتجات المُباعة ويتحسبوا اوتوماتيك عشان الكود يكون ليه معنى
 	cout << "#20 Circuit Board Price Task" << endl;
 	double product, companyprofits;
 	cout << "Enter the amount of the saled product: ";
@@ -420,6 +425,7 @@ int main()
 	cout << "The Distance = " << noGallons * avgMiles << " miles " << endl;
 	cout << " " << endl;
 	// (22) Write a C++ Program that reads an integer number in 1:7 and prints the day name.
+	// hint : طالب منك تعمل برنامج بالسويتش بحيث تخلي اليوزر يكتب رقم من 1 ل 7 ويطلعله اسم اليوم، ودا مش محتاج شرح ركز فالكود وهتفهم
 	cout << "#22 Day Number Switch Task" << endl;
 	cout << "Enter the Day number :";
 	int dayNumber;
@@ -459,6 +465,7 @@ int main()
 		cout << "" << endl;
 	}
 	// (23) Write a C++ Program that takes the month number from the user 1:12 and prints the month name
+	// hint : نفس فكرة السؤال الي فوق طالب منك تكتب برنامج بالسويتش بيخلي اليوزر يحط رقم من 1 ل 12 ويطلعله اسم الشهر
 	cout << "#23 Enter day month: ";
 	int dayMonth;
 	cin >> dayMonth;
@@ -517,28 +524,30 @@ int main()
 		cout << "" << endl;
 	}
 	// (24) Write a Program that takes two number from the user and prints their division. If the user try to divide by zero, the program should print a message division by zero is not allowable.
+	// hint : if دا سؤال حلو طالب منك تعمل برنامج قسمة ولكن لو اليوزر حط في المقام 0 يكتبله ان مينفعش تقسم على 0 ودي هتتحل بالـ
 	cout << "#24 Divison Task" << endl;
 	double firstNumber, secondNumber;
 	cout << "Enter the first number : ";
 	cin >> firstNumber;
 	cout << "Enter the sec Number : ";
 	cin >> secondNumber;
-	if (firstNumber != 0 && secondNumber == 0 || firstNumber == 0 && secondNumber == 0)
+	if (secondNumber == 0) // الشرط الي بيخليه ميقدرش يحط المقام ب 0
 	{
-		cout << "division by zero is not allowable!" << endl;
+		cout << "division by zero or negative number is not allowable!" << endl;
 		cout << "" << endl;
 	}
-	else if (firstNumber && secondNumber != 0)
+	else // خلاف ذلك هيقسم عادي جدا 
 	{
 		cout << "The division answer = " << firstNumber / secondNumber << endl;
 		cout << "" << endl;
 	}
 	// (25) Write a C++ program to print the age stage if the user ennters a certain age.
+	// hint : ifطالب منك تخلي اليوزر يحط سِنه وبناءً على سِنه يظهر لليوزر المرحلة العُمرية بتاعته ودي هنعملها بالـ
 	cout << "#25 Certain age." << endl;
 	cout << "Enter your Age: ";
 	int Age;
 	cin >> Age;
-	if (Age <= 7 && Age != 0)
+	if (Age <= 7 && Age != 0) 
 	{
 		cout << "Your Stage of life is Early childhood (infantia)." << endl;
 		cout << " " << endl;
@@ -574,6 +583,7 @@ int main()
 		cout << " " << endl;
 	}
 	// (26) using switch program evalute the user's answer for a question based on the user's answer, please select the correct answer for the following question, the sum of 5+5 = , a) 2 , b) 3 , c) 5 , d) 10.
+	// hint : طالب منك برنامج بالسويتش بيخليك تحط سؤال لليوزر وتخيره بين 4 اجابات والاجابة الصح يكتبله انها صح والعكس صحيح
 	cout << "#26 Using switch program make a question based on the user's answer Task" << endl;
 	cout << "Answer the Following Question :-" << endl;
 	cout << "The sum of 5+5 = " << endl;
@@ -607,6 +617,8 @@ int main()
 		cout << "" << endl;
 	}
 	// (27) Write a program that inputs three integers from the keyboard and prints the sum, average, product, smallest and largest of the numbers.
+	// hint : طالب منك برنامج بيخلي  اليوزر يكتب 3 ارقام، ويطلعله ناتج الجمع والقسمة والضرب والرقم الاصغر والرقم الأكبر
+	// info : فيه طريقة أسهل بكتير تخلينا نطلع الأصغر والأكبر بس لسه هناخدها قدامifكله سهل الا انك تطلع الرقم الأكبر والأصغر، ف قررت اعملها ب الـ 
 	int firstInt, secInt, thirdInt;
 	cout << "#27 sum & average * product & smallest and largest number Task" << endl;
 	cout << "Input first integer: ";
@@ -646,6 +658,8 @@ int main()
 		cout << "" << endl;
 	}
 	// (28) Dr.Suarez teaches a literature class and uses the following 10 point grading scale for all of his exams.
+	// hint : طالب منك برنامج تحسب منه تقدير نتيجة الطالب بناءً على درجته الي هيدخلها في الإنبوت
+	// info : عادي خالص ifهتتحل بالـ
 	cout << "#28 Score Task." << endl;
 		int score;
 	cout << "Enter your score : ";
@@ -676,6 +690,8 @@ int main()
 		cout << "" << endl;
 	}
 	// (29) Write a program that reads three nonzero double values ... etc
+	// info : بيقولك اكتب برنامج بيقرأ ال3 أضلاع بتوع المثلث ويقولك لو دا يُمثل مثلث ولا لا
+	// hint : لو فيه ضلعين أكبر من التالت ف دا يُمثل مثلث
 	cout << "#29 Triangle Task" << endl;
 	double firstSide, secondSide, thirdSide;
 	cout << "Put the Triangle first side value: ";
@@ -684,7 +700,7 @@ int main()
 	cin >> secondSide;
 	cout << "Put the Triangle third side value: ";
 	cin >> thirdSide;
-	if ((firstSide + secondSide > thirdSide) &&  (secondSide + thirdSide > firstSide) && (thirdSide + firstSide > secondSide))
+	if ((firstSide + secondSide > thirdSide) &&  (secondSide + thirdSide > firstSide) && (thirdSide + firstSide > secondSide)) 
 	{
 		cout << "The Three sides reprepresent a triangle" << endl;
 		cout << "" << endl;
